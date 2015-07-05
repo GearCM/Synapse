@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/src/main/res
 LOCAL_MANIFEST_FILE := src/main/AndroidManifest.xml
 
-LOCAL_MODULE_TAGS := tests
+LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src/main/java)
 LOCAL_STATIC_JAVA_LIBRARIES := \
