@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.1.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 19
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    
+    buildTypes {
+        release {
+            proguardFile 'src/main/proguard-rules.pro'
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+        }
+        debug {
+            proguardFile 'src/main/proguard-rules.pro'
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            applicationIdSuffix '.dev'
+            versionNameSuffix '-dev'
+        }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile files ('libs/json-smart-1.2.jar')
+}

@@ -1,34 +1,19 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
 buildscript {
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.11.+'
-    }
-}
-apply plugin: 'android'
+        classpath 'com.android.tools.build:gradle:1.1.0'
 
-repositories {
-    mavenCentral()
-}
-
-android {
-    compileSdkVersion 19
-    buildToolsVersion "19.1.0"
-
-    defaultConfig {
-        minSdkVersion 17
-        targetSdkVersion 19
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
 }
 
-dependencies {
-    compile 'com.android.support:support-v4:19.1.0'
-    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
-    compile files ('libs/json-smart-1.2.jar')
+allprojects {
+    repositories {
+        jcenter()
+    }
 }
