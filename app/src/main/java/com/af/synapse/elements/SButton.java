@@ -83,6 +83,7 @@ public class SButton extends BaseElement implements View.OnClickListener,
 
             if (tv instanceof TextView)
                 ((TextView) tv).setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        }
 
         t.show();
     }
